@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct StratDetailView: View {
+struct StratagemDetailView: View {
     @State var isPlaying = false
 
     var stratagem: Stratagem
@@ -19,17 +19,19 @@ struct StratDetailView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Play") { isPlaying = true }
+                if !stratagem.sequences.isEmpty {
+                    Button("Play") { isPlaying = true }
+                }
             }
         }
         .sheet(isPresented: $isPlaying) {
-            Text("here supposed to be a swipe game with stratagemes")
+            StratagemGameView(stratagem: stratagem)
         }
     }
 }
 
 #Preview {
     NavigationStack {
-        StratDetailView(stratagem: stratagems[0].list[0])
+        StratagemDetailView(stratagem: stratagems[0].list[0])
     }
 }
