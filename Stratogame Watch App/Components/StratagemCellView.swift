@@ -8,11 +8,17 @@ struct StratagemCellView: View {
             Image(strat.image)
                 .resizable()
                 .frame(width: 44, height: 44)
-            Text("\(strat.title)")
+            VStack(alignment: .leading) {
+                Text("\(strat.title)")
+                let bestTime = ResultsManager.getBestTime(by: strat.title)
+                if bestTime > 0 {
+                    Text("\(String(format: "%.2f", bestTime))s")
+                }
+            }
         }
     }
 }
 
 #Preview {
-    StratagemCellView(strat: stratagems.first!.list.last!)
+    StratagemCellView(strat: stratagems.first!.list.first!)
 }

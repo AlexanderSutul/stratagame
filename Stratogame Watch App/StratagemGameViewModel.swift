@@ -1,9 +1,16 @@
 import SwiftUI
 
+protocol StratagemUserDefaults {
+    static func setNewBestTime(_ key: String, seconds: Double)
+    static func getBestTime(by key: String) -> Double
+}
+
 class StratagemGameViewModel: ObservableObject {
     init(stratagem: Stratagem) {
         self.stratagem = stratagem
         stratagemStatuses = stratagem.sequences.map { s in StratagemSeqCellStatus(seq: s, status: nil) }
+
+        bestSeconds = ResultsManager.getBestTime(by: stratagem.title)
     }
 
     var stratagem: Stratagem
@@ -17,6 +24,8 @@ class StratagemGameViewModel: ObservableObject {
     @Published var currentIndex = 0
     @Published var stratagemStatuses: [StratagemSeqCellStatus]
     @Published var swipeOffset: CGSize = .zero
+
+    @Published var bestSeconds: Double
 
     func stopGame() {
         isGameActive = false
@@ -75,6 +84,11 @@ class StratagemGameViewModel: ObservableObject {
             if currentIndex == stratagemStatuses.count {
                 stopGame()
             }
+        }
+
+        if isFullSuccess() {
+            ResultsManager.setNewBestTime(stratagem.title, seconds: seconds)
+            bestSeconds = ResultsManager.getBestTime(by: stratagem.title)
         }
     }
 }

@@ -18,6 +18,7 @@
 		F8E12B1B2BDBFFB100ACC310 /* StratagemGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12B1A2BDBFFB100ACC310 /* StratagemGameView.swift */; };
 		F8E12B1D2BDC5E8E00ACC310 /* StratagemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12B1C2BDC5E8E00ACC310 /* StratagemCellView.swift */; };
 		F8E12B1F2BDD029300ACC310 /* StratagemGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12B1E2BDD029300ACC310 /* StratagemGameViewModel.swift */; };
+		F8E12B212BDD2F6B00ACC310 /* ResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12B202BDD2F6B00ACC310 /* ResultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F8E12B1A2BDBFFB100ACC310 /* StratagemGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratagemGameView.swift; sourceTree = "<group>"; };
 		F8E12B1C2BDC5E8E00ACC310 /* StratagemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratagemCellView.swift; sourceTree = "<group>"; };
 		F8E12B1E2BDD029300ACC310 /* StratagemGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratagemGameViewModel.swift; sourceTree = "<group>"; };
+		F8E12B202BDD2F6B00ACC310 /* ResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +92,14 @@
 		F8E12AFE2BD9B46A00ACC310 /* Stratogame Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F8E12B202BDD2F6B00ACC310 /* ResultsManager.swift */,
+				F8E12B1E2BDD029300ACC310 /* StratagemGameViewModel.swift */,
 				F8E12B172BDBB42D00ACC310 /* Components */,
 				F8E12B112BD9B96600ACC310 /* ViewModel.swift */,
 				F8E12AFF2BD9B46A00ACC310 /* StratogameApp.swift */,
 				F8E12B012BD9B46A00ACC310 /* ContentView.swift */,
 				F8E12B032BD9B46B00ACC310 /* Assets.xcassets */,
 				F8E12B052BD9B46B00ACC310 /* Preview Content */,
-				F8E12B1E2BDD029300ACC310 /* StratagemGameViewModel.swift */,
 			);
 			path = "Stratogame Watch App";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				F8E12B1B2BDBFFB100ACC310 /* StratagemGameView.swift in Sources */,
 				F8E12B192BDBB44900ACC310 /* StratagemListView.swift in Sources */,
 				F8E12B022BD9B46A00ACC310 /* ContentView.swift in Sources */,
+				F8E12B212BDD2F6B00ACC310 /* ResultsManager.swift in Sources */,
 				F8E12B1F2BDD029300ACC310 /* StratagemGameViewModel.swift in Sources */,
 				F8E12B122BD9B96600ACC310 /* ViewModel.swift in Sources */,
 				F8E12B002BD9B46A00ACC310 /* StratogameApp.swift in Sources */,

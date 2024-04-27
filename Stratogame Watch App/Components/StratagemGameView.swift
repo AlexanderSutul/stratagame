@@ -23,12 +23,17 @@ struct StratagemGameView: View {
             }
             HStack { Spacer() }
                 .overlay(content: {
-                    if vm.seconds > 0 {
-                        Text("\(String(format: "%.2f", vm.seconds))s")
-                            .onTapGesture {
-                                vm.stopGame()
-                                vm.resetStatuses()
-                            }
+                    VStack {
+                        if vm.seconds > 0 {
+                            Text("\(String(format: "%.2f", vm.seconds))s")
+                        }
+                        if vm.bestSeconds > 0 {
+                            Text("Best time:\(String(format: "%.2f", vm.bestSeconds))s")
+                        }
+                    }
+                    .onTapGesture {
+                        vm.stopGame()
+                        vm.resetStatuses()
                     }
                 })
                 .frame(height: 100)
