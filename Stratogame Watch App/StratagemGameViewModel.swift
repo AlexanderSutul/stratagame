@@ -27,6 +27,14 @@ class StratagemGameViewModel: ObservableObject {
 
     @Published var bestSeconds: Double
 
+    func resetGame() {
+        stopGame()
+        resetStatuses()
+
+        seconds = 0
+        currentIndex = 0
+    }
+
     func stopGame() {
         isGameActive = false
         timer.upstream.connect().cancel()
@@ -73,12 +81,11 @@ class StratagemGameViewModel: ObservableObject {
             }
         }
 
-        swipeOffset = .zero
-
         if let seq = seq {
             if !isGameActive { startGame() }
 
-            stratagemStatuses[currentIndex].status = seq == stratagem.sequences[currentIndex]
+            let currentSeq = stratagemStatuses[currentIndex].seq
+            stratagemStatuses[currentIndex].status = seq == currentSeq
             currentIndex += 1
 
             if currentIndex == stratagemStatuses.count {
@@ -90,5 +97,7 @@ class StratagemGameViewModel: ObservableObject {
             ResultsManager.setNewBestTime(stratagem.title, seconds: seconds)
             bestSeconds = ResultsManager.getBestTime(by: stratagem.title)
         }
+
+        swipeOffset = .zero
     }
 }

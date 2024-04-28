@@ -15,7 +15,7 @@ struct StratagemGameView: View {
     var body: some View {
         VStack(spacing: 12) {
             Text(vm.stratagem.title)
-            HStack(spacing: 12) {
+            HStack {
                 ForEach(vm.stratagemStatuses, id: \.self) { stat in
                     Image(systemName: "arrow.\(stat.seq.rawValue).square")
                         .foregroundStyle(getSeqColor(status: stat.status))
@@ -26,14 +26,11 @@ struct StratagemGameView: View {
                     VStack {
                         if vm.seconds > 0 {
                             Text("\(String(format: "%.2f", vm.seconds))s")
+                                .onTapGesture { vm.resetGame() }
                         }
                         if vm.bestSeconds > 0 {
                             Text("Best time:\(String(format: "%.2f", vm.bestSeconds))s")
                         }
-                    }
-                    .onTapGesture {
-                        vm.stopGame()
-                        vm.resetStatuses()
                     }
                 })
                 .frame(height: 100)
