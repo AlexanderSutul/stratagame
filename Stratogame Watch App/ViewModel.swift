@@ -96,6 +96,26 @@ let stratagems: [StratagemSection] = [
               .init(title: "LIFT-850 Jump Pack",
                     image: .jumppack,
                     description: "The Helldiver-issued jump pack propels the wearer a short distance into the air and forward, allowing for swift movement over difficult terrain. The pack is cumbersome, and as a result, the wearer won’t be able to go prone.",
-                    sequences: [.down, .up, .up, .down, .up])
+                    sequences: [.down, .up, .up, .down, .up]),
+              .init(title: "B-1 Supply Pack",
+                    image: .b1,
+                    description: "Supply boxes containing ammunition, with a backpack that allows the user to distribute boxes to fellow Helldivers.",
+                    sequences: [.down, .left, .down, .up, .up, .down]),
+              .init(title: "AX/LAS-5 \"Guard Dog\" Rover",
+                    image: .dog,
+                    description: "Helldiver, when you are facing down a pack of ravenous bugs, you want someone to have your back watching over you. The best way for someone to watch your back is to strap them to it! When you select this stratagem, you will have a flying robot sentry circle around you, clearing away the common chaff using the LAS-5 Scythe. Your back buddy allows you to focus your chosen dispenser of Liberty upon the more heavily armored units.",
+                    sequences: [.down, .up, .left, .up, .right, .right]),
+              .init(title: "SH-20 Ballistic Shield Backpack",
+                    image: .balshield,
+                    description: "A backpack which can be wielded as a one-handed ballistic shield, protecting against small arms fire.",
+                    sequences: [.down, .left, .down, .down, .up, .left]),
+              .init(title: "SH-32 Shield Generator Pack",
+                    image: .shieldgen,
+                    description: "The shield pack provides the wearer with a powerful shield, essentially extending the amount of damage the Helldiver can take before dying.",
+                    sequences: [.down, .up, .left, .right, .left, .right]),
+              .init(title: "AX/AR-23 \"Guard Dog\"",
+                    image: .guarddog,
+                    description: "The AD-334 Guard Dog is a defensive automated drone armed with a small submachine gun. It is based from a backpack carried on the Helldivers back and will land there to rearm whenever it runs out of ammunition. The AD-334 is part of the Defender equipment kit.",
+                    sequences: [.down, .up, .left, .up, .right, .down])
           ])
 ]
