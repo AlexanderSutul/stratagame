@@ -8,7 +8,7 @@ struct StratagemListView: View {
             ForEach(stratagemSections) { section in
                 Section(header: Text(section.type.rawValue)) {
                     ForEach(section.list) { strat in
-                        NavigationLink(destination: StratagemDetailView(stratagem: strat)) {
+                        NavigationLink(destination: StratagemGameView(stratagem: strat)) {
                             StratagemCellView(strat: strat)
                         }
                     }
