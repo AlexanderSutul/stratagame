@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F87EEF872C89025800E2945F /* Stratogame_IosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EEF862C89025800E2945F /* Stratogame_IosApp.swift */; };
+		F87EEF892C89025800E2945F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EEF882C89025800E2945F /* ContentView.swift */; };
+		F87EEF8B2C89025A00E2945F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87EEF8A2C89025A00E2945F /* Assets.xcassets */; };
+		F87EEF8E2C89025A00E2945F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87EEF8D2C89025A00E2945F /* Preview Assets.xcassets */; };
 		F8E12AFB2BD9B46A00ACC310 /* Stratogame Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8E12AFA2BD9B46A00ACC310 /* Stratogame Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8E12B002BD9B46A00ACC310 /* StratogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12AFF2BD9B46A00ACC310 /* StratogameApp.swift */; };
 		F8E12B022BD9B46A00ACC310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E12B012BD9B46A00ACC310 /* ContentView.swift */; };
@@ -45,6 +49,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F87EEF842C89025800E2945F /* Stratogame Ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stratogame Ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87EEF862C89025800E2945F /* Stratogame_IosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratogame_IosApp.swift; sourceTree = "<group>"; };
+		F87EEF882C89025800E2945F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F87EEF8A2C89025A00E2945F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F87EEF8D2C89025A00E2945F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F87EEF972C89025A00E2945F /* Stratogame_IosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratogame_IosTests.swift; sourceTree = "<group>"; };
+		F87EEFA12C89025A00E2945F /* Stratogame_IosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratogame_IosUITests.swift; sourceTree = "<group>"; };
+		F87EEFA32C89025A00E2945F /* Stratogame_IosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratogame_IosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8E12AF42BD9B46A00ACC310 /* Stratogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stratogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E12AFA2BD9B46A00ACC310 /* Stratogame Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stratogame Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E12AFF2BD9B46A00ACC310 /* StratogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratogameApp.swift; sourceTree = "<group>"; };
@@ -60,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F87EEF812C89025800E2945F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E12AF72BD9B46A00ACC310 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +89,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F87EEF852C89025800E2945F /* Stratogame Ios */ = {
+			isa = PBXGroup;
+			children = (
+				F87EEF862C89025800E2945F /* Stratogame_IosApp.swift */,
+				F87EEF882C89025800E2945F /* ContentView.swift */,
+				F87EEF8A2C89025A00E2945F /* Assets.xcassets */,
+				F87EEF8C2C89025A00E2945F /* Preview Content */,
+			);
+			path = "Stratogame Ios";
+			sourceTree = "<group>";
+		};
+		F87EEF8C2C89025A00E2945F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F87EEF8D2C89025A00E2945F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F87EEF962C89025A00E2945F /* Stratogame IosTests */ = {
+			isa = PBXGroup;
+			children = (
+				F87EEF972C89025A00E2945F /* Stratogame_IosTests.swift */,
+			);
+			path = "Stratogame IosTests";
+			sourceTree = "<group>";
+		};
+		F87EEFA02C89025A00E2945F /* Stratogame IosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F87EEFA12C89025A00E2945F /* Stratogame_IosUITests.swift */,
+				F87EEFA32C89025A00E2945F /* Stratogame_IosUITestsLaunchTests.swift */,
+			);
+			path = "Stratogame IosUITests";
+			sourceTree = "<group>";
+		};
 		F8E12AED2BD9B46900ACC310 = {
 			isa = PBXGroup;
 			children = (
 				F8E12AFE2BD9B46A00ACC310 /* Stratogame Watch App */,
+				F87EEF852C89025800E2945F /* Stratogame Ios */,
+				F87EEF962C89025A00E2945F /* Stratogame IosTests */,
+				F87EEFA02C89025A00E2945F /* Stratogame IosUITests */,
 				F8E12AF52BD9B46A00ACC310 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +141,7 @@
 			children = (
 				F8E12AF42BD9B46A00ACC310 /* Stratogame.app */,
 				F8E12AFA2BD9B46A00ACC310 /* Stratogame Watch App.app */,
+				F87EEF842C89025800E2945F /* Stratogame Ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,10 +182,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F87EEF832C89025800E2945F /* Stratogame Ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F87EEFAB2C89025A00E2945F /* Build configuration list for PBXNativeTarget "Stratogame Ios" */;
+			buildPhases = (
+				F87EEFB02C8902F900E2945F /* ShellScript */,
+				F87EEF802C89025800E2945F /* Sources */,
+				F87EEF812C89025800E2945F /* Frameworks */,
+				F87EEF822C89025800E2945F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stratogame Ios";
+			productName = "Stratogame Ios";
+			productReference = F87EEF842C89025800E2945F /* Stratogame Ios.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8E12AF32BD9B46A00ACC310 /* Stratogame */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8E12B0E2BD9B46B00ACC310 /* Build configuration list for PBXNativeTarget "Stratogame" */;
 			buildPhases = (
+				F87EEFAE2C8902C600E2945F /* ShellScript */,
 				F8E12AF22BD9B46A00ACC310 /* Resources */,
 				F8E12B0D2BD9B46B00ACC310 /* Embed Watch Content */,
 			);
@@ -144,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8E12B0A2BD9B46B00ACC310 /* Build configuration list for PBXNativeTarget "Stratogame Watch App" */;
 			buildPhases = (
+				F87EEFAF2C8902F000E2945F /* ShellScript */,
 				F8E12AF62BD9B46A00ACC310 /* Sources */,
 				F8E12AF72BD9B46A00ACC310 /* Frameworks */,
 				F8E12AF82BD9B46A00ACC310 /* Resources */,
@@ -164,9 +243,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					F87EEF832C89025800E2945F = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					F8E12AF32BD9B46A00ACC310 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -190,11 +272,21 @@
 			targets = (
 				F8E12AF32BD9B46A00ACC310 /* Stratogame */,
 				F8E12AF92BD9B46A00ACC310 /* Stratogame Watch App */,
+				F87EEF832C89025800E2945F /* Stratogame Ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F87EEF822C89025800E2945F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F87EEF8E2C89025A00E2945F /* Preview Assets.xcassets in Resources */,
+				F87EEF8B2C89025A00E2945F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E12AF22BD9B46A00ACC310 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,7 +305,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F87EEFAE2C8902C600E2945F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, install using 'brew install swiftformat'\"\nfi\n";
+		};
+		F87EEFAF2C8902F000E2945F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, install using 'brew install swiftformat'\"\nfi\n";
+		};
+		F87EEFB02C8902F900E2945F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n    swiftformat .\nelse\n    echo \"warning: SwiftFormat not installed, install using 'brew install swiftformat'\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		F87EEF802C89025800E2945F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F87EEF892C89025800E2945F /* ContentView.swift in Sources */,
+				F87EEF872C89025800E2945F /* Stratogame_IosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E12AF62BD9B46A00ACC310 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +395,81 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F87EEFA52C89025A00E2945F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stratogame Ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 6EC22GM3RJ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.Stratogame-Ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F87EEFA62C89025A00E2945F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stratogame Ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 6EC22GM3RJ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.Stratogame-Ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F8E12B082BD9B46B00ACC310 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -274,6 +504,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -335,6 +566,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -364,6 +596,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Stratogame Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 6EC22GM3RJ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stratogame;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -394,6 +627,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Stratogame Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 6EC22GM3RJ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stratogame;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -422,6 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6EC22GM3RJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_KEY_CFBundleDisplayName = Stratogame;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.Stratogame;
@@ -438,6 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6EC22GM3RJ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_KEY_CFBundleDisplayName = Stratogame;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.Stratogame;
@@ -451,6 +687,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F87EEFAB2C89025A00E2945F /* Build configuration list for PBXNativeTarget "Stratogame Ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F87EEFA52C89025A00E2945F /* Debug */,
+				F87EEFA62C89025A00E2945F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8E12AF12BD9B46900ACC310 /* Build configuration list for PBXProject "Stratogame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
