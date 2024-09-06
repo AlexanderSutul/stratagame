@@ -37,6 +37,7 @@
 		F87EEFBC2C890DE400E2945F /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		F8C6F3B32C89148A0024911F /* Stratogame Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Stratogame Watch App.app"; path = "/Users/aleksandrsutulov/projects/stratagame/build/Debug-watchos/Stratogame Watch App.app"; sourceTree = "<absolute>"; };
 		F8C6F3D82C8919100024911F /* Stratogame iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Stratogame iOS.app"; path = "/Users/aleksandrsutulov/projects/stratagame/build/Debug-iphoneos/Stratogame iOS.app"; sourceTree = "<absolute>"; };
+		F8C6F3FC2C8B55FD0024911F /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftformat; sourceTree = "<group>"; };
 		F8E12AFF2BD9B46A00ACC310 /* StratogameWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratogameWatchApp.swift; sourceTree = "<group>"; };
 		F8E12B012BD9B46A00ACC310 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8E12B032BD9B46B00ACC310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F8E12AED2BD9B46900ACC310 = {
 			isa = PBXGroup;
 			children = (
+				F8C6F3FC2C8B55FD0024911F /* .swiftformat */,
 				F87EEFBC2C890DE400E2945F /* .swift-version */,
 				F87EEFB12C8903C200E2945F /* App */,
 				F8E12AFE2BD9B46A00ACC310 /* Stratogame Watch */,

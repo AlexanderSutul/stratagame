@@ -9,7 +9,7 @@ class ResultsManager {
     }
 
     static func getBestTime(by key: String) -> Double {
-        return UserDefaults.standard.double(forKey: key)
+        UserDefaults.standard.double(forKey: key)
     }
 
     static func resetAllResults() {

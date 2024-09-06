@@ -14,119 +14,85 @@ struct StratagemSection: Identifiable {
 }
 
 struct Stratagem: Identifiable, Hashable {
-    var id = UUID()
+    var id: Int
     var title: String
-    var image: ImageResource
-    var description: String
     var sequences: [StratagemSeq]
 }
 
 enum StratagemType: String {
     case Mission
     case Defensive
-    case SupplyBackpacks = "Supply Backpacks"
-    case SupportWeapons = "Support Weapons"
-    case SupplyVehicles = "Supply: Vehicles"
+    case SupplyBackpacks = "Supply: Backpacks"
+    case SupportWeapons = "Support: Weapons"
+    case SupplyElectronics = "Supply: Electronics"
     case OffensiveOrbital = "Offensive: Orbital"
-    case OffensiveEagle = "Offensive: Eagle"
+    case OffensiveTactical = "Offensive: Tactical"
 }
 
 let stratagems: [StratagemSection] = [
-    .init(type: .Mission,
-          list: [
-              Stratagem(
-                  title: "Reinforce",
-                  image: .reinforce,
-                  description: "Amidst the chaos of battle, amidst the thunderous roar of conflict, we stand as one, united in purpose, bound by the sacred oath of liberty's champions. For every Helldiver who has fallen, for every comrade lost in the crucible of war, their memory shall be etched in the annals of heroism, their valor a beacon that guides us through the darkest of nights.",
-                  sequences: [.up, .down, .right, .left, .up]
-              ),
-              Stratagem(
-                  title: "SOS Beacon",
-                  image: .sos,
-                  description: "The SOS Beacon is a Stratagem that deploys a beacon that calls other Helldivers in orbit to your aid.",
-                  sequences: [.up, .down, .left, .right]
-              ),
-              Stratagem(
-                  title: "Resupply",
-                  image: .resupply,
-                  description: "A pod containing ammunition and ordnance. The supplies take some time to deploy as they have to be customized before being deployed.",
-                  sequences: [.down, .down, .up, .right]
-              ),
-              Stratagem(
-                  title: "SEAF Artillery",
-                  image: .seaf,
-                  description: "S.E.A.F shells of varying types will spawn in several locations throughout a S.E.A.F fortification. There will always be at least 5 shells present but spawn-rates tend towards 7-8 shells.",
-                  sequences: [.right, .up, .up, .down]
-              ),
-              Stratagem(
-                  title: "Eagle Fighter",
-                  image: .reeagle,
-                  description: "The Eagle Fighter is a multi-role aerospace craft used by the Super Earth Armed Forces, often deployed under Helldiver Command to perform atmospheric operations.",
-                  sequences: [.up, .up, .left, .up, .right]
-              ),
-              Stratagem(
-                  title: "NUX-223 Hellbomb",
-                  image: .hell,
-                  description: "The Hellbomb is provided when the Helldivers need to destroy a stationary target.",
-                  sequences: [.down, .up, .left, .down, .up, .right, .down, .up]
-              ),
-              Stratagem(
-                  title: "SSSD Delivery",
-                  image: .ssd,
-                  description: "No data, just delivery.",
-                  sequences: [.down, .down, .down, .up, .up]
-              ),
-              Stratagem(
-                  title: "Upload Escape Pod Data",
-                  image: .upload,
-                  description: "An escape pod with information vital to the war effort has crashed on the surface of this planet. Your job is to collect that data. Dive in, find the pod, and upload the data using yourself as a relay. Now get down there, helldiver.",
-                  sequences: [.left, .right, .up, .up, .up]
-              ),
-              Stratagem(
-                  title: "Seismic Probe",
-                  image: .probe,
-                  description: "Just no data.",
-                  sequences: [.up, .up, .left, .right, .down, .down]
-              ),
-              Stratagem(
-                  title: "Prospecting Drill",
-                  image: .drill,
-                  description: "Just no data.",
-                  sequences: [.down, .down, .left, .right, .down, .down]
-              ),
-              Stratagem(
-                  title: "Spread Democracy",
-                  image: .flag,
-                  description: "Raise the Super Earth flag as an unassailable beacon of Liberty.",
-                  sequences: []
-              ),
-
-          ]),
-    .init(type: .SupplyBackpacks,
-          list: [
-              .init(title: "LIFT-850 Jump Pack",
-                    image: .jumppack,
-                    description: "The Helldiver-issued jump pack propels the wearer a short distance into the air and forward, allowing for swift movement over difficult terrain. The pack is cumbersome, and as a result, the wearer won’t be able to go prone.",
-                    sequences: [.down, .up, .up, .down, .up]),
-              .init(title: "B-1 Supply Pack",
-                    image: .b1,
-                    description: "Supply boxes containing ammunition, with a backpack that allows the user to distribute boxes to fellow Helldivers.",
-                    sequences: [.down, .left, .down, .up, .up, .down]),
-              .init(title: "AX/LAS-5 \"Guard Dog\" Rover",
-                    image: .dog,
-                    description: "Helldiver, when you are facing down a pack of ravenous bugs, you want someone to have your back watching over you. The best way for someone to watch your back is to strap them to it! When you select this stratagem, you will have a flying robot sentry circle around you, clearing away the common chaff using the LAS-5 Scythe. Your back buddy allows you to focus your chosen dispenser of Liberty upon the more heavily armored units.",
-                    sequences: [.down, .up, .left, .up, .right, .right]),
-              .init(title: "SH-20 Ballistic Shield Backpack",
-                    image: .balshield,
-                    description: "A backpack which can be wielded as a one-handed ballistic shield, protecting against small arms fire.",
-                    sequences: [.down, .left, .down, .down, .up, .left]),
-              .init(title: "SH-32 Shield Generator Pack",
-                    image: .shieldgen,
-                    description: "The shield pack provides the wearer with a powerful shield, essentially extending the amount of damage the Helldiver can take before dying.",
-                    sequences: [.down, .up, .left, .right, .left, .right]),
-              .init(title: "AX/AR-23 \"Guard Dog\"",
-                    image: .guarddog,
-                    description: "The AD-334 Guard Dog is a defensive automated drone armed with a small submachine gun. It is based from a backpack carried on the Helldivers back and will land there to rearm whenever it runs out of ammunition. The AD-334 is part of the Defender equipment kit.",
-                    sequences: [.down, .up, .left, .up, .right, .down]),
-          ]),
+    StratagemSection(type: .Mission, list: [
+        Stratagem(id: 24, title: "Reinforce", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.right, StratagemSeq.left, StratagemSeq.up]),
+        Stratagem(id: 25, title: "SOS Beacon", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.right, StratagemSeq.up]),
+        Stratagem(id: 26, title: "Resupply", sequences: [StratagemSeq.down, StratagemSeq.down, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 27, title: "NUX-223 Hellbomb", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.down, StratagemSeq.up]),
+        Stratagem(id: 28, title: "SSSD Delivery", sequences: [StratagemSeq.down, StratagemSeq.down, StratagemSeq.down, StratagemSeq.up, StratagemSeq.up]),
+        Stratagem(id: 29, title: "Seismic Probe", sequences: [StratagemSeq.up, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right, StratagemSeq.down, StratagemSeq.down]),
+        Stratagem(id: 32, title: "SEAF Artillery", sequences: [StratagemSeq.right, StratagemSeq.up, StratagemSeq.up, StratagemSeq.down]),
+        Stratagem(id: 33, title: "Super Earth Flag", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.down, StratagemSeq.up]),
+    ]),
+    StratagemSection(type: .Defensive, list: [
+        Stratagem(id: 34, title: "E/MG-101 HMG Emplacement", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right, StratagemSeq.right, StratagemSeq.left]),
+        Stratagem(id: 35, title: "FX-12 Shield Generator Relay", sequences: [StratagemSeq.down, StratagemSeq.down, StratagemSeq.left, StratagemSeq.right, StratagemSeq.left, StratagemSeq.right]),
+        Stratagem(id: 36, title: "A/ARC-3 Tesla Tower", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right]),
+        Stratagem(id: 37, title: "MD-6 Anti-Personnel Minefield", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 39, title: "A/MG-43 Machine Gun Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.right, StratagemSeq.up]),
+        Stratagem(id: 40, title: "A/G-16 Gatling Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.left]),
+        Stratagem(id: 41, title: "A/M-12 Mortar Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.right, StratagemSeq.down]),
+        Stratagem(id: 42, title: "A/AC-8 Autocannon Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.up, StratagemSeq.left, StratagemSeq.up]),
+        Stratagem(id: 43, title: "A/MLS-4X Rocket Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.right, StratagemSeq.left]),
+        Stratagem(id: 44, title: "A/M-23 EMS Mortar Sentry", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.right, StratagemSeq.down, StratagemSeq.right]),
+    ]),
+    StratagemSection(type: .SupplyBackpacks, list: [
+        Stratagem(id: 2, title: "B-1 Supply Pack", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up, StratagemSeq.up, StratagemSeq.down]),
+        Stratagem(id: 3, title: "AX/LAS-5 \"Guard Dog\" Rover", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.up, StratagemSeq.right, StratagemSeq.right]),
+        Stratagem(id: 4, title: "SH-20 Ballistic Shield Backpack", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.down, StratagemSeq.down, StratagemSeq.up, StratagemSeq.left]),
+    ]),
+    StratagemSection(type: .SupportWeapons, list: [
+        Stratagem(id: 7, title: "MG-43 Machine Gun", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 8, title: "APW-1 Anti-Materiel Rifle", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.right, StratagemSeq.up, StratagemSeq.down]),
+        Stratagem(id: 9, title: "M-105 Stalwart", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up, StratagemSeq.up, StratagemSeq.left]),
+        Stratagem(id: 10, title: "EAT-17 Expendable Anti-tank", sequences: [StratagemSeq.down, StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 11, title: "GR-8 Recoilless Rifle", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.right, StratagemSeq.right, StratagemSeq.left]),
+        Stratagem(id: 13, title: "AC-8 Autocannon", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 14, title: "MG-206 Heavy Machine Gun", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.down, StratagemSeq.down]),
+        Stratagem(id: 15, title: "RS-422 Railgun", sequences: [StratagemSeq.down, StratagemSeq.right, StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right]),
+        Stratagem(id: 17, title: "GL-21 Grenade Launcher", sequences: [StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.left, StratagemSeq.down]),
+        Stratagem(id: 19, title: "ARC-3 Arc Thrower", sequences: [StratagemSeq.down, StratagemSeq.right, StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.left]),
+        Stratagem(id: 20, title: "LAS-99 Quasar Cannon", sequences: [StratagemSeq.down, StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right]),
+        Stratagem(id: 21, title: "RL-77 Airburst Rocket Launcher", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right]),
+    ]),
+    StratagemSection(type: .SupplyElectronics, list: [
+        Stratagem(id: 7, title: "Recon Drone", sequences: [StratagemSeq.right, StratagemSeq.up, StratagemSeq.left, StratagemSeq.down, StratagemSeq.left]),
+        Stratagem(id: 8, title: "EMP Drone", sequences: [StratagemSeq.right, StratagemSeq.left, StratagemSeq.up, StratagemSeq.down, StratagemSeq.right]),
+        Stratagem(id: 9, title: "Sensor Package", sequences: [StratagemSeq.left, StratagemSeq.right, StratagemSeq.down, StratagemSeq.up, StratagemSeq.down]),
+        Stratagem(id: 10, title: "Jammer", sequences: [StratagemSeq.up, StratagemSeq.left, StratagemSeq.right, StratagemSeq.down, StratagemSeq.left]),
+        Stratagem(id: 11, title: "Tactical Scanner", sequences: [StratagemSeq.up, StratagemSeq.right, StratagemSeq.left, StratagemSeq.down, StratagemSeq.up]),
+        Stratagem(id: 15, title: "Recon Drone", sequences: [StratagemSeq.left, StratagemSeq.right, StratagemSeq.up, StratagemSeq.down, StratagemSeq.right]),
+        Stratagem(id: 17, title: "Signal Jammer", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right, StratagemSeq.down]),
+        Stratagem(id: 19, title: "EMP Grenade", sequences: [StratagemSeq.right, StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 21, title: "Deployable Camera", sequences: [StratagemSeq.left, StratagemSeq.up, StratagemSeq.down, StratagemSeq.right, StratagemSeq.left]),
+    ]),
+    StratagemSection(type: .OffensiveOrbital, list: [
+        Stratagem(id: 54, title: "SatCom Orbital Strike", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.left, StratagemSeq.right, StratagemSeq.right, StratagemSeq.down]),
+        Stratagem(id: 55, title: "Solar Beam Satellite", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.left, StratagemSeq.right, StratagemSeq.left]),
+        Stratagem(id: 56, title: "EM Pulse Orbital Strike", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.left, StratagemSeq.left, StratagemSeq.right]),
+        Stratagem(id: 57, title: "Satellite Guided Bombardment", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.left, StratagemSeq.up, StratagemSeq.right]),
+        Stratagem(id: 58, title: "Plasma Satellite Cannon", sequences: [StratagemSeq.up, StratagemSeq.down, StratagemSeq.left, StratagemSeq.right]),
+    ]),
+    StratagemSection(type: .OffensiveTactical, list: [
+        Stratagem(id: 59, title: "Tactical Airstrike", sequences: [StratagemSeq.left, StratagemSeq.right, StratagemSeq.up, StratagemSeq.down]),
+//        Stratagem(id: 60, title: "Tactical Smoke Screen", sequences: [StratagemSeq.right, StratagemSeq.up, StratagemSeq.down, StratagemSeq.left]),
+        Stratagem(id: 61, title: "Tactical EMP Grenade", sequences: [StratagemSeq.left, StratagemSeq.down, StratagemSeq.right, StratagemSeq.up]),
+        Stratagem(id: 62, title: "Tactical Cluster Bomb", sequences: [StratagemSeq.down, StratagemSeq.up, StratagemSeq.left, StratagemSeq.right]),
+    ]),
 ]

@@ -5,7 +5,7 @@ struct StratagemCellView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(strat.image)
+            Image("\(strat.id)")
                 .resizable()
                 .frame(width: 44, height: 44)
                 .background(.black)

@@ -49,11 +49,11 @@ class StratagemGameViewModel: ObservableObject {
     }
 
     func isFullSuccess() -> Bool {
-        return stratagemStatuses.allSatisfy { $0.status == true }
+        stratagemStatuses.allSatisfy { $0.status == true }
     }
 
     private func getStratagemsWithNilStatuses() -> [StratagemSeqCellStatus] {
-        return stratagemStatuses.map { s in StratagemSeqCellStatus(seq: s.seq, status: nil) }
+        stratagemStatuses.map { s in StratagemSeqCellStatus(seq: s.seq, status: nil) }
     }
 
     func resetStatuses() {
