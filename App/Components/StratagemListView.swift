@@ -14,7 +14,7 @@ struct StratagemListView: View {
                     }
                 }
             }
-            Button("Remove all results") { ResultsManager.resetAllResults() }
+            ResetAllResults(onTap: { ResultsManager.resetAllResults() })
         }
     }
 }
